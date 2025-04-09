@@ -30,6 +30,7 @@ public class V1 extends JFrame implements ActionListener {
 	private JButton btnSumarDosReales;
 	private JScrollPane scrollPane;
 	private JTextArea txtS;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -118,8 +119,17 @@ public class V1 extends JFrame implements ActionListener {
 				scrollPane.setViewportView(txtS);
 			}
 		}
+		{
+			btnNewButton_1 = new JButton("New button");
+			btnNewButton_1.addActionListener(this);
+			btnNewButton_1.setBounds(10, 73, 89, 23);
+			contentPane.add(btnNewButton_1);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_1) {
+			do_btnNewButton_1_actionPerformed(e);
+		}
 		if (e.getSource() == btnSumarDosReales) {
 			do_btnSumarDosReales_actionPerformed(e);
 		}
@@ -164,6 +174,8 @@ public class V1 extends JFrame implements ActionListener {
 	} catch (Exception e2) {
 		MostrarError();
 	}		
+	}
+	protected void do_btnNewButton_1_actionPerformed(ActionEvent e) {
 	}
 }
 
